@@ -12,7 +12,7 @@ function Navbar() {
   if (isAuthLoading) return;
 
   return (
-    <header className="bg-[rgba(45,52,57,0.9)] backdrop-blur-md border-b border-white/10  px-6 sm:px-12 md:px-20 h-22 sm:h-28   z-1000 fixed top-0 left-0 w-full flex justify-between items-center max-w-screen">
+    <header className="bg-gradient-to-r from-black/80 to-black/85 md:from-black/70 md:to-black/75 backdrop-blur-xl sm:backdrop-blur-lg md:backdrop-blur-md border-b border-white/15 shadow-md shadow-black/30 before:absolute before:inset-0 before:bg-gradient-to-b before:from-white/5 before:to-transparent before:pointer-events-none  px-6 sm:px-12 md:px-20 h-22 sm:h-28 z-1000 fixed top-0 left-0 w-full flex justify-between items-center max-w-screen">
       <div>
         <Link to="/">
           <img
@@ -24,7 +24,7 @@ function Navbar() {
       </div>
       <nav className="flex w-full justify-end items-center flex-[0_1_40%]">
         <div className="flex items-center flex-[0_1_40%] justify-end">
-          {authStatus.isLoggedIn ? (
+          {authStatus?.isLoggedIn ? (
             <>
               <div className="uppercase text-xl sm:text-2xl md:text-3xl flex items-center gap-4 sm:gap-8  text-[#f7f7f7] transition-transform duration-300 cursor-pointer">
                 <Link
@@ -49,7 +49,7 @@ function Navbar() {
               <div className=" text-[#f7f7f7] uppercase text-[1.4rem] sm:text-2xl md:text-3xl  flex  gap-5 sm:gap-8  items-center transition-all duration-200 cursor-pointer ">
                 <Link
                   to="/login"
-                  className="  hover:-translate-y-0.5 inline-block"
+                  className=" hover:-translate-y-1 inline-block"
                 >
                   LOGIN
                 </Link>

@@ -21,7 +21,7 @@ function HomePage() {
   }
 
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-18  md:gap-20 lg:gap-22">
+    <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-18 md:gap-20 lg:gap-22">
       {tours.map((tour) => (
         <TourCard tour={tour} key={tour._id} />
       ))}

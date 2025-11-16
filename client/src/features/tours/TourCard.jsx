@@ -6,7 +6,7 @@ import TourCardFooter from "./TourCardFooter";
 
 function TourCard({ tour }) {
   return (
-    <div className="rounded-xl overflow-hidden bg-[#fff] shadow-2xl transition-all duration-300 flex flex-col w-full sm:w-[90%] md:w-[80%] lg:w-full mx-auto">
+    <div className="rounded-xl overflow-hidden bg-[#fff] shadow-2xl transition-all duration-300 flex flex-col w-full max-w-2xl sm:w-[90%] md:w-[80%] lg:w-full mx-auto">
       <TourCardHeader tour={tour} />
 
       <TourCardContent tour={tour} />

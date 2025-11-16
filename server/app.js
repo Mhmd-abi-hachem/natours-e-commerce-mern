@@ -17,7 +17,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: [process.env.CLIENT_URL, "http://localhost:5173"],
+    origin: [process.env.CLIENT_URL, "http://192.168.0.106:5173"],
     credentials: true,
   })
 );
@@ -37,7 +37,6 @@ app.use(cookieParser());
 
 // Data sanitization
 
-//  Data sanitization to sanitize only req.body and req.params
 app.use((req, res, next) => {
   if (req.body) {
     req.body = mongoSanitize.sanitize(req.body, { replaceWith: "_" });

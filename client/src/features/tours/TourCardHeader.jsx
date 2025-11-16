@@ -11,8 +11,7 @@ function TourCardHeader({ tour }) {
           alt={`${tour.name} tour image`}
         />
       </div>
-      <h3 className="heading-tertirary ">
-        {/* // text-lg sm:text-xl md:text-2xl lg:text-3xl */}
+      <h3 className="heading-tertirary">
         <span>{tour.name}</span>
       </h3>
     </div>

@@ -35,20 +35,6 @@ function TourBooking({ tour }) {
           <img src="/logo-white.png" alt="Natours app logo" />
         </div>
 
-        <img
-          className="cta__img cta__img--1"
-          src={`/tours/${tour.images[1]}`}
-          alt="An image taken from the Tour"
-          loading="lazy"
-        />
-
-        <img
-          className="cta__img cta__img--2"
-          src={`/tours/${tour.images[2]}`}
-          alt="Another image taken from the Tour"
-          loading="lazy"
-        />
-
         <div className="cta__content">
           <h2 className="heading-secondary">What are you waiting for?</h2>
           <p className="text-3xl">{`${tour.duration} days. 1 adventure. Infinite memories. Make it yours today!`}</p>

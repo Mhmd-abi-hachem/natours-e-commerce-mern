@@ -124,7 +124,7 @@ export const isLoggedIn = async (req, res, next) => {
   // Note that no error to be thrown here in this fn
   if (req.cookies.jwt) {
     try {
-      // 1) Veriy token
+      // 1) Verify token
       const decoded = await promisify(jwt.verify)(
         req.cookies.jwt,
         process.env.JWT_SECRET_KEY

@@ -12,7 +12,7 @@ function Navbar() {
   if (isAuthLoading) return;
 
   return (
-    <header className="bg-gradient-to-r from-black/80 to-black/85 md:from-black/70 md:to-black/75 backdrop-blur-xl sm:backdrop-blur-lg md:backdrop-blur-md border-b border-white/15 shadow-md shadow-black/30 before:absolute before:inset-0 before:bg-gradient-to-b before:from-white/5 before:to-transparent before:pointer-events-none  px-6 sm:px-12 md:px-20 h-22 sm:h-28 z-1000 fixed top-0 left-0 w-full flex justify-between items-center max-w-screen">
+    <header className="bg-[rgba(255,255,255,0.7)] border-b border-b-[rgb(212,217,219)] backdrop-blur-[6px] shadow-md px-6 sm:px-12 md:px-20 h-22 sm:h-28 z-1000 fixed top-0 left-0 w-full flex justify-between items-center max-w-screen">
       <div>
         <Link to="/">
           <img
@@ -26,7 +26,7 @@ function Navbar() {
         <div className="flex items-center flex-[0_1_40%] justify-end">
           {authStatus?.isLoggedIn ? (
             <>
-              <div className="uppercase text-xl sm:text-2xl md:text-3xl flex items-center gap-4 sm:gap-8  text-[#f7f7f7] transition-transform duration-300 cursor-pointer">
+              <div className="uppercase text-xl sm:text-2xl md:text-3xl flex items-center gap-4 sm:gap-6 text-[rgba(0,0,0,0.65)] hover:text-[rgba(0,0,0,1)] font-medium transition-all duration-300 cursor-pointer">
                 <Link
                   to={`/my-account/${authStatus.user.id}`}
                   className="flex justify-center items-center hover:-translate-y-1 whitespace-nowrap"
@@ -46,16 +46,17 @@ function Navbar() {
             </>
           ) : (
             <>
-              <div className=" text-[#f7f7f7] uppercase text-[1.4rem] sm:text-2xl md:text-3xl  flex  gap-5 sm:gap-8  items-center transition-all duration-200 cursor-pointer ">
+              <div className="uppercase text-[1.4rem] sm:text-2xl md:text-[1.7rem] lg:text-[1.8rem] flex gap-4 sm:gap-6 items-center cursor-pointer ">
                 <Link
                   to="/login"
-                  className=" hover:-translate-y-1 inline-block"
+                  id="links"
+                  className="text-[rgba(0,0,0,0.65)] hover:text-[rgba(0,0,0,1)] font-medium transition-all duration-300 hover:-translate-y-1 inline-block"
                 >
                   LOGIN
                 </Link>
                 <Link
                   to="/signup"
-                  className="py-2 sm:py-3 px-5 sm:px-10 rounded-full border-2 border-[#f7f7f7] inline-block hover:bg-[#f7f7f7] hover:-translate-y-1 hover:text-[#232323] text-xl md:text-2xl lg:text-3xl whitespace-nowrap"
+                  className="text-[#f7f7f7] bg-[#55c57a] py-2 sm:py-3 px-5 sm:px-10 rounded-full inline-block hover:bg-[#34a259] transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl md:text-3xl lg:text-3xl whitespace-nowrap"
                 >
                   Sign Up
                 </Link>

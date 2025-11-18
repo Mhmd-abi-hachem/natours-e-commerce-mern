@@ -18,7 +18,7 @@ function Button({
 }) {
   const sizeClass =
     size === "small"
-      ? "py-3 px-8 text-[1.65rem]"
+      ? "py-3 px-8 text-[1.65rem] md:text-[1.75rem]"
       : size === "medium"
       ? "text-[1.75rem] py-4 px-8"
       : "text-3xl py-7 px-14";

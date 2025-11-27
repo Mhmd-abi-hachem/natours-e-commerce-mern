@@ -26,10 +26,10 @@ function Navbar() {
         <div className="flex items-center flex-[0_1_40%] justify-end">
           {authStatus?.isLoggedIn ? (
             <>
-              <div className="uppercase text-xl sm:text-2xl md:text-3xl flex items-center gap-4 sm:gap-6 text-[rgba(0,0,0,0.65)] hover:text-[rgba(0,0,0,1)] font-medium transition-all duration-300 cursor-pointer">
+              <div className="uppercase text-xl sm:text-2xl md:text-3xl flex items-center gap-4 sm:gap-6 text-[rgba(0,0,0,0.65)] hover:text-[rgba(0,0,0,1)] font-medium transition-all duration-300">
                 <Link
                   to={`/my-account/${authStatus.user.id}`}
-                  className="flex justify-center items-center hover:-translate-y-1 whitespace-nowrap"
+                  className="flex justify-center items-center hover:-translate-y-1 whitespace-nowrap cursor-pointer"
                 >
                   <span>{authStatus.user.name}</span>
                 </Link>
